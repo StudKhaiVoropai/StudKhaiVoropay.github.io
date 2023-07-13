@@ -1,0 +1,87 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#block-body {
+    width: 100%;
+    margin: 0px auto;
+    height: auto;
+}
+header {
+   top: 0;
+   width: 100%; 
+   height: 80px;
+   background-color: rgb(55, 0, 67);
+   position: fixed;
+   border-bottom: 3px solid rgb(255, 180, 0);
+   z-index: 100;
+}
+
+#Logo {
+  text-align: center;
+}
+
+#Logo img {
+  display: inline-block;
+  width: 20%; /* Замените значение на желаемый размер */
+  height: auto; /* Замените значение на желаемый размер */
+  box-sizing: border-box;
+}
+
+
+.top-menu {
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.top-menu ul li {
+	width: 12%;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+.top-menu ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-family:  "Snell Roundhand", cursive;
+    font-size: 135%;
+    color: white;
+    height: 65px;
+    padding-top: 15px;
+    cursor: pointer;
+	z-index: 100;
+}
+.top-menu ul li a:hover {
+    transition: all 1s ease-out;
+    box-shadow: 0 -40px 40px -30px rgb(255, 180, 0) inset;
+	color: rgb(255, 180, 0);
+}
+
+header:hover {
+    transition: all 1s ease-out;
+    box-shadow: 0 30px 30px -30px rgb(255, 180, 0) inset;
+}
+
+footer:hover {
+    transition: all 1s ease-out;
+    box-shadow: 0 -50px 50px -50px rgb(255, 180, 0) inset;
+}
+
+footer {
+   width: 100%; 
+   height: 80px;
+   background-color: rgb(55, 0, 67);
+   border-top: 3px solid rgb(255, 180, 0);
+   z-index: 100;
+}
+footer p {
+	text-align: center;
+    width: 100%;
+    font-size: 20px;
+    color:rgb(255, 180, 0);
+    height: 55px;
+    padding-top: 25px;
+	}

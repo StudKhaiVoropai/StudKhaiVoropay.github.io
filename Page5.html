@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+</html>
+<head>
+	<title>Моя Ознайомча практика 2023</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content ="NRG" />
+	<meta name="keywords" content="Практика" />
+	<link type="text/css" rel="stylesheet" href="css/Menu.css">
+	<link type="text/css" rel="stylesheet" href="css/Page.css">
+</head>
+<body>
+
+<body>
+ 
+    <div id="block-body">
+
+
+
+     <header>
+
+       <div class="top-menu">
+         <ul>
+		     <li><a href="index.html">Головна</a></li>
+			 <li><a href="AboutUs.html">Зміст</a></li>
+             <li><a href="Page1.html">Завдання 1 Теорія</a></li>
+             <li><a href="Page2.html">Завдання 1 Практика</a></li>
+             <li><a href="Page3.html">Завдання 1 Тестування</a></li>
+			 <li><a href="Page4.html">Завдання 2 Теорія</a></li>
+             <li><a href="Page5.html">Завдання 2 Практика</a></li>
+             <li><a href="Page6.html">Завдання 2 Тестування</a></li>
+         </ul>  
+       </div> 
+         
+     </header>
+      <div id="block-content">
+	    
+	    <div id="Logo">
+	    <img src="images/logo_og.png">
+	    <img src="images/XAI603Logo.png">
+	    </div>
+	    
+	    <center><h1>Завдання 2 Практика</h1></center>
+		<div id="text">&nbsp;</div>
+		<div id="text">Для реалізації було обрано мову програмування C# та середовище розробки Visual studio.</div>
+		<div id="text">На основі теоретичної інформації було виконано реалізацію чисельного методу для вирішення кубічних рівнянь методом хорд.</div>
+		<div id="text">Цей метод приймає коефіцієнти a, b, c, d кубічного рівняння, початкове наближення initialGuess та точність tolerance. Та повертає наближений корінь рівняння.</div>
+		<div id="text">Далі наведено алгоритм розв’язання задачі у вигляді блок-схеми.</div>
+		<div id="imageS"><img src="images/Zav2_1.jpg"></div>
+		<div id="text">Далі було розроблено інтерфейс користувача для взаємодії з програмою.</div>
+		<div id="text">Інтерфейс складається з полів для вводу та виводу даних та кнопок.</div>
+		<div id="imageS"><img src="images/Zav2_2.jpg"></div>
+		<div id="text">Далі було реалізовано метод хорд засобами програмування scilab та перевірено правильність отриманих програмою рішень за допомогою чисельного методу аналогічного тому, що розроблено в C#;</div>
+		
+		<div id="code">function x = solveCubicEquation(a, b, c, d, initialGuess, tolerance)</div>
+		<div id="code">x0 = initialGuess;</div>
+		<div id="code">x1 = x0 - (evaluateCubicEquation(a, b, c, d, x0) / evaluateCubicEquationDerivative(a, b, c, d, x0));</div>
+		<div id="code">while abs(x1 - x0) > tolerance</div>
+		<div id="code">x0 = x1;</div>
+		<div id="code">x1 = x0 - (evaluateCubicEquation(a, b, c, d, x0) / evaluateCubicEquationDerivative(a, b, c, d, x0));</div>
+		<div id="code">end</div>
+		<div id="code">x = x1;</div>
+		<div id="code">endfunction</div>
+		<div id="code">&nbsp;</div>
+		<div id="code">function y = evaluateCubicEquation(a, b, c, d, x)</div>
+		<div id="code">y = (a * x^3) + (b * x^2) + (c * x) + d;</div>
+		<div id="code">endfunction</div>
+		<div id="code">&nbsp;</div>
+		<div id="code">function y = evaluateCubicEquationDerivative(a, b, c, d, x)</div>
+		<div id="code">y = (3 * a * x^2) + (2 * b * x) + c;</div>
+		<div id="code">endfunction</div>
+		<div id="code">&nbsp;</div>
+		<div id="code">// Приклад використання:</div>
+		<div id="code">a = 1.0;</div>
+		<div id="code">b = 3.0;</div>
+		<div id="code">c = -24.0;</div>
+		<div id="code">d = -10.0;</div>
+		<div id="code">tolerance = 0.000001;</div>
+
+		<div id="code">&nbsp;</div>
+		<div id="code">root1 = solveCubicEquation(a, b, c, d, -10, tolerance);</div>
+		<div id="code">root2 = solveCubicEquation(a, b, c, d, 0, tolerance);</div>
+		<div id="code">root3 = solveCubicEquation(a, b, c, d, 10, tolerance);</div>
+		<div id="code">disp("Виконано реалізацію чисельного методу засобами програмування Scilab");</div>
+		<div id="code">disp("Root: x1=" + string(root1)+" x2="+ string(root2)+" x3="+ string(root3));</div>
+		
+		
+		<div id="text">Перевірка за допомогою fsolve – стандартної команди scilab.</div>
+		<div id="code">disp("Перевірка за допомогою solve");</div>
+		<div id="code">function y = f(x)</div>
+		<div id="code">y = x^3 + 3*x^2 - 24*x - 10;</div>
+		<div id="code">endfunction</div>
+		<div id="code">x = linspace(-10, 10, 3);</div>
+		<div id="code">y = f(x);</div>
+		
+		<div id="code">&nbsp;</div>
+		<div id="code">tol = 1e-6;  // допустима похибка</div>
+		<div id="code">roots = fsolve(x, f, tol);</div>
+		<div id="code">disp(roots);</div>
+		
+		<div id="code">&nbsp;</div>
+		<div id="code">x = linspace(-10, 10, 1000);</div>
+		<div id="code">y = f(x);</div>
+		<div id="code">plot2d(x, y);</div>
+		<div id="code">xgrid();</div>
+		<div id="code">xtitle('x');</div>
+		<div id="code">title('Графік функції f(x)');</div>
+		
+
+		
+		
+		<div id="text">&nbsp;</div>
+		
+	  </div>  
+      
+	  <footer>
+			  <p>© 2023 - Розробив Вороопай В.Ю.</p>
+	  </footer>
+
+	  
+    </div>   
+
+</body>
+</html>
+<!--Voropay Vlad-->

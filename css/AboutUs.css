@@ -1,0 +1,100 @@
+
+body {
+    background: rgb(135, 102, 142);
+}
+
+#block-content {
+    margin-top: 80px;
+		padding-top: 80px;
+	width: 100%;
+    height: auto;
+    min-height: 1000px;
+	background: linear-gradient(45deg, rgb(135, 102, 142), rgb(75, 25, 86), rgb(135, 102, 142));
+}
+#TeamPhoto img 
+{width:80%;
+margin-top: 40px;
+border: 5px solid rgb(255, 180, 0);
+}
+
+#TeamPhoto p {
+        font-family:  "Snell Roundhand", cursive;
+    font-size: 30px;
+    color:rgb(255, 180, 0);
+    padding-top: 10px;
+	}
+
+
+div.TeamPersonal {
+	width: 100%;
+    height: auto;
+	margin-top: 40px;
+	display:inline-block;
+	}
+div.TeamPersonal div {
+	width: 350px;
+	height: auto;
+    vertical-align: top;
+	display:inline-block;
+	margin: 20px 20px 20px 0px;
+	}	
+	
+div.TeamPersonal p{
+    font-size: 20px;
+    padding-top: 5px;
+	color: white;
+	display: none;
+	font-style: oblique;
+	}
+
+	
+div.TeamPersonal img {
+	width: 350px;
+    height: 262px;
+border: 3px solid rgb(255, 180, 0);
+	}
+	
+	div.TeamPersonal div:hover {transition-duration: 1s;
+	transform: scale(1.2);
+	margin: 40px 40px 40px 20px;
+	}
+	
+	div.TeamPersonal div:hover p{
+		display:block;
+	background: rgb(55, 0, 67);
+	border: 3px solid rgb(255, 180, 0);
+}
+
+
+.Misze {
+	width: 80%;
+    height: auto;
+	margin: 80px auto 0px auto;
+	}
+	
+.Misze h1 {color:rgb(255, 180, 0);
+text-align: center;
+font-size: 40px;
+    font-family:  "Snell Roundhand", cursive;
+}
+
+.Misze img {border: 3px solid rgb(255, 180, 0);
+margin: 0 auto 0 auto;
+}
+/*
+	      <div class="TeamPersonal"> 
+		  <center>
+		  <div><img src="images/Pers1.jpg"> <p>Виталий Луценко<br> Являюсь персональным тренером. Буду рад помочь каждому достичь своей мечты красивого тела!</p></div>
+		  <div><img src="images/Pers2.jpg"> <p>Татьяна Быстрых <br> Персональный тренер. Инструктор-универсал групповых программ. </p></div>
+		  <div><img src="images/Pers3.jpg"> <p>Сергей Комзюк <br> Я работаю скульптором мышечных волокон - персональным тренером в мастерской твоего тела, NRG!</p></div>
+		  <div><img src="images/Pers4.jpg"> <p>Сергей Праворенко <br> Я сертифицированый персональный тренер. Опыт тренерской работы более 3-х лет.</p></div>
+		  <div><img src="images/Pers5.jpg"> <p>Оля Абрамчук <br> Я опытный персональный тренер тренажерного зала. Обожаю функциональные тренировки, TRX, Crossfit.</p></div>
+		  </center>
+		  </div>
+		  */
+
+
+
+
+
+

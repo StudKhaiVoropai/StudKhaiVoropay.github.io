@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+</html>
+<head>
+	<title>Моя Ознайомча практика 2023</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content ="NRG" />
+	<meta name="keywords" content="Практика" />
+	<link type="text/css" rel="stylesheet" href="css/Menu.css">
+	<link type="text/css" rel="stylesheet" href="css/Page.css">
+</head>
+<body>
+
+<body>
+ 
+    <div id="block-body">
+
+
+
+     <header>
+
+       <div class="top-menu">
+         <ul>
+		     <li><a href="index.html">Головна</a></li>
+			 <li><a href="AboutUs.html">Зміст</a></li>
+             <li><a href="Page1.html">Завдання 1 Теорія</a></li>
+             <li><a href="Page2.html">Завдання 1 Практика</a></li>
+             <li><a href="Page3.html">Завдання 1 Тестування</a></li>
+			 <li><a href="Page4.html">Завдання 2 Теорія</a></li>
+             <li><a href="Page5.html">Завдання 2 Практика</a></li>
+             <li><a href="Page6.html">Завдання 2 Тестування</a></li>
+         </ul>  
+       </div> 
+         
+     </header>
+      <div id="block-content">
+	    
+	    <div id="Logo">
+	    <img src="images/logo_og.png">
+	    <img src="images/XAI603Logo.png">
+	    </div>
+	    
+	    <center><h1>Завдання 1 Практика</h1></center>
+		<div id="text">&nbsp;</div>
+	    <div id="text"><h2>Завдання 1.1</h2></div>
+		<div id="imageS"><img src="images/ZdUsl1.png"></div>
+		<div id="text">Щоб побудувати графік функції y = e^cos(2x) та отримати таблицю значень на проміжку [0, π] в Scilab виконав наступні кроки.</div>
+		<div id="text">Визначив проміжок значень x. У даному випадку проміжок [0, π] можна визначити за допомогою функції linspace, яка створює рівномірно розподілені значення між двома кінцями проміжку.</div>
+		<div id="code">x = linspace(0, %pi, 11);</div>
+		<div id="text">Визначте функцію y для заданих значень x.</div>
+		<div id="code">y = exp(cos(2*x));</div>
+		<div id="text">Використав функцію plot, яка дозволяє побудувати графік з вказаними значеннями x та y.</div>
+		<div id="code">plot(x, y);</div>
+		<div id="text">Далі в коді створює матрицю, де перша колонка містить значення x, а друга колонка містить значення y. Функція disp виведе цю матрицю на екран у вигляді таблиці.</div>
+		<div id="code">disp([x', y']);</div>
+		<div id="text">Для перевірки в excel побудували стовпчик x зі значеннями проміжку. У іншому стовпчику вводимо формулу та отримуємо відповідні значення. Далі будуємо діаграму.</div>
+		
+		<div id="text">&nbsp;</div>
+		<div id="text"><h2>Завдання 1.2</h2></div>
+		
+		<div id="imageS"><img src="images/ZdUsl2.png"></div>
+		<div id="text">Рівняння x + ln(x) = 0.25 є трансцендентним рівнянням, що означає, що воно не має аналітичного розв'язку у вигляді простої формули.</div>
+		<div id="text">Для чисельного розв'язування рівняння, спочатку визначте функцію, яку потрібно розв'язати.</div>
+		<div id="code">function y = f(x)</div>
+		<div id="code">y = x + log(x) - 0.25;</div>
+		<div id="code">endfunction</div>
+		<div id="text">Далі, використовуємо чисельний метод для знаходження кореня рівняння, використовуємо вбудовану функцію fsolve, яка реалізує метод Ньютона.</div>
+		<div id="code">x0 = 1;  // Початкове наближення</div>
+		<div id="code">x = fsolve(x0, f);</div>
+		<div id="code">disp(x);</div>
+		<div id="text">Для перевірки в excel записуємо формулу в комірку і привязуємо значення x до іншої комірки. Далі використовуємо “Дані >> Аналіз >> Пошук рішення” для розв’язку та отримуємо значення x.</div>
+		
+		<div id="text">&nbsp;</div>
+		<div id="text"><h2>Завдання 1.3</h2></div>
+		<div id="imageS"><img src="images/ZdUsl3.png"></div>
+		<div id="text">Для знаходження чисельного розв'язку даної системи рівнянь за допомогою Scilab, знадобиться використати ітераційний метод.</div>
+		<div id="code">x = 0;</div>
+		<div id="code">y = 0;</div>
+		<div id="text">Визначимо функції для обчислення значень x та y на кожній ітерації.</div>
+		<div id="code">function x_next = update_x(x, y)</div>
+		<div id="code">x_next = x^2+0.8*y^2+0.1</div>
+		<div id="code">endfunction</div>
+		<div id="code">function y_next = update_y(x, y)</div>
+		<div id="code">y_next = 2*x*y+0.1</div>
+		<div id="code">endfunction</div>
+		<div id="text">Визначимо кількість ітерацій та точність.</div>
+		<div id="code">iterations = 10;</div>
+		<div id="code">tolerance = 1e-6;</div>
+		<div id="text">Виконуємо ітераційний процес для знаходження розв'язку системи рівнянь.</div>
+		<div id="code">for i = 1:iterations</div>
+		<div id="code">x_prev = x;</div>
+		<div id="code">y_prev = y;</div>
+		<div id="code">x = update_x(x_prev, y_prev);</div>
+		<div id="code">y = update_y(x_prev, y_prev);</div>
+		<div id="code">if abs(x - x_prev) &#8826; tolerance && abs(y - y_prev) &#8826; tolerance </div>
+		<div id="code">break;</div>
+		<div id="code">end</div>
+		<div id="code">end</div>
+		<div id="code">disp("x="+ string(x) +"   y="+ string(y));</div>
+		<div id="text">Для перевірки в excel створюємо два стовпчика з відповідними формулами, в якості початкового значення x та y беремо точку (0;0) і методом ітерацій отримуємо наближене значення x та y.</div>
+		
+	
+		
+		
+		<div id="text">&nbsp;</div>
+		
+	  </div>  
+      
+	  <footer>
+			  <p>© 2023 - Розробив Вороопай В.Ю.</p>
+	  </footer>
+
+	  
+    </div>   
+
+</body>
+</html>
+<!--Voropay Vlad-->

@@ -1,0 +1,54 @@
+body {
+    background: rgb(135, 102, 142);
+}
+
+#block-content {
+    margin-top: 80px;
+	padding-top: 80px;
+	width: 100%;
+    height: auto;
+    min-height: 1000px;
+	background: linear-gradient(rgb(75, 25, 86), rgb(135, 102, 142), rgb(75, 25, 86));
+	padding-bottom: 20px;
+}
+
+h1 {
+color:rgb(255, 180, 0);
+font-size: 40px;
+    font-family:  "Snell Roundhand", cursive;
+}
+
+#text {
+	width: 80%;
+	margin: 20px auto;
+	font-size: 20px;
+	color: white;
+	font-style: oblique;
+}
+
+#textP {
+	width: 80%;
+	margin: 5px auto;
+	padding-left: 40px;
+	font-size: 18px;
+	color: white;
+	font-style: oblique;
+}
+
+#code {
+	width: 80%;
+	margin: 0px auto;
+	font-size: 20px;
+	color: rgb(255, 180, 0);
+	padding-left: 40px;
+}
+#imageS{margin-left: 10%;}
+
+#imageS img {
+border: 3px solid rgb(255, 180, 0);
+margin: 0px 10px;
+max-width: 80%;
+
+
+}
+
